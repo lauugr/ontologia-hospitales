@@ -1,12 +1,30 @@
-# Implementación de la ontología
-Esta carpeta contiene los archivos correspondientes a la implementación formal de la ontología. Estos representan la definición formal y procesable por máquinas del modelo ontológico.
+# Ontology Implementation
 
-## Propósito
-El objetivo de este directorio es almacenar los artefactos ontológicos generados, que describen las clases, propiedades, relaciones y restricciones definidas durante la fase de conceptualización.
+This folder contains the **implementation files of the ontology**, representing the formal and machine-readable definition of the knowledge model.
 
-## Contenidos
-Se incluyen archivos que representan la ontología implementada, tales como:
-- `.owl` — ficheros OWL (*Web Ontology Language*)
-- `.rdf` — ficheros RDF (*Resource Description Framework*)
-- `.ttl` — serialización Turtle de RDF
-- `.jsonld` — JSON-LD (JSON for Linked Data)
+# Purpose
+The goal of this directory is to store the **final ontology artifacts**, which describe the classes, properties, relationships, and constraints defined during the conceptualization phase.
+
+These files are typically used for:
+- Semantic reasoning and inference  
+- Data integration and interoperability  
+- Knowledge graph construction  
+- Publishing the ontology for reuse
+
+# Contents
+Include here any files that represent the implemented ontology, such as:
+
+- `.owl` — Ontology Web Language files  
+- `.rdf` — Resource Description Framework files  
+- `.ttl` — Turtle serialization of RDF  
+- `.jsonld` — JSON for Linked Data  
+
+# Best Practices
+- Keep ontology versions clearly labeled and documented.  
+- Validate ontology syntax and semantics before committing changes.  
+- Maintain consistency with the conceptual diagrams and documentation stored in the **conceptualization** folder.  
+- Use a standardized namespace and prefix strategy.
+
+# Notes
+- This folder should contain only **implementation files** — not diagrams, notes, or documentation.  
+- Consider adding a changelog or version history file if multiple ontology versions are maintained.
