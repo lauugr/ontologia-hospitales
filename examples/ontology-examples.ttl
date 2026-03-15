@@ -1,0 +1,525 @@
+@prefix : <https://w3id.org/def/salud/hospital#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix hosp: <https://w3id.org/def/salud/hospital#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix schema: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/def/salud/hospital#> .
+
+<https://w3id.org/def/salud/hospital#> rdf:type owl:Ontology ;
+                                        owl:versionIRI <https://w3id.org/def/salud/hospital/0.2> ;
+                                        dcterms:created "2026-03-10"^^xsd:date ;
+                                        dcterms:creator "Laura Gilgado Romero" ;
+                                        dcterms:description "Ontología que describe los elementos asociados a los hospitales, entendidos como infraestructura sanitaria."@es ;
+                                        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                        dcterms:title "Ontología para la representación de hospitales"@es ;
+                                        vann:preferredNamespacePrefix "hosp" ;
+                                        vann:preferredNamespaceUri <https://w3id.org/def/salud/hospital#> ;
+                                        owl:versionInfo "0.2" ;
+                                        mod:createdWith <https://chowlk.linkeddata.es/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#createdWith
+mod:createdWith rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://schema.org/address
+schema:address rdf:type owl:ObjectProperty ;
+               rdfs:domain schema:Hospital ;
+               rdfs:range schema:PostalAddress ;
+               rdfs:label "address" .
+
+
+###  https://schema.org/addressCountry
+schema:addressCountry rdf:type owl:ObjectProperty ;
+                      rdfs:domain schema:PostalAddress ;
+                      rdfs:range schema:Country ;
+                      rdfs:label "address country" .
+
+
+###  https://schema.org/addressLocality
+schema:addressLocality rdf:type owl:ObjectProperty ;
+                       rdfs:domain schema:PostalAddress ;
+                       rdfs:range hosp:Municipality ;
+                       rdfs:label "address locality" .
+
+
+###  https://schema.org/addressRegion
+schema:addressRegion rdf:type owl:ObjectProperty ;
+                     rdfs:domain schema:PostalAddress ;
+                     rdfs:range hosp:AutonomousCommunity ;
+                     rdfs:label "address region" .
+
+
+###  https://w3id.org/def/salud/hospital#addressProvince
+hosp:addressProvince rdf:type owl:ObjectProperty ;
+                     rdfs:domain schema:PostalAddress ;
+                     rdfs:range hosp:Province ;
+                     rdfs:label "address province" .
+
+
+###  https://w3id.org/def/salud/hospital#containedInCountry
+hosp:containedInCountry rdf:type owl:ObjectProperty ;
+                        rdfs:domain hosp:AutonomousCommunity ;
+                        rdfs:range schema:Country ;
+                        rdfs:label "contained in country" .
+
+
+###  https://w3id.org/def/salud/hospital#containedInProvince
+hosp:containedInProvince rdf:type owl:ObjectProperty ;
+                         rdfs:domain hosp:Municipality ;
+                         rdfs:range hosp:Province ;
+                         rdfs:label "contained in province" .
+
+
+###  https://w3id.org/def/salud/hospital#containedInRegion
+hosp:containedInRegion rdf:type owl:ObjectProperty ;
+                       rdfs:domain hosp:Province ;
+                       rdfs:range hosp:AutonomousCommunity ;
+                       rdfs:label "contained in region" .
+
+
+###  https://w3id.org/def/salud/hospital#hasConcertAgreement
+hosp:hasConcertAgreement rdf:type owl:ObjectProperty ;
+                         rdfs:domain schema:Hospital ;
+                         rdfs:range hosp:ConcertAgreement ;
+                         rdfs:label "has concert agreement" .
+
+
+###  https://w3id.org/def/salud/hospital#hasFunctionalDependency
+hosp:hasFunctionalDependency rdf:type owl:ObjectProperty ;
+                             rdfs:domain schema:Hospital ;
+                             rdfs:range hosp:FunctionalDependency ;
+                             rdfs:label "has functional dependency" .
+
+
+###  https://w3id.org/def/salud/hospital#hasHospitalType
+hosp:hasHospitalType rdf:type owl:ObjectProperty ;
+                     rdfs:domain schema:Hospital ;
+                     rdfs:range hosp:HospitalType ;
+                     rdfs:label "has hospital type" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://schema.org/name
+schema:name rdf:type owl:DatatypeProperty ;
+            rdfs:domain schema:Hospital ;
+            rdfs:range xsd:string ;
+            rdfs:label "name" .
+
+
+###  https://schema.org/postalCode
+schema:postalCode rdf:type owl:DatatypeProperty ;
+                  rdfs:domain schema:PostalAddress ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "postal code" .
+
+
+###  https://schema.org/streetAddress
+schema:streetAddress rdf:type owl:DatatypeProperty ;
+                     rdfs:domain schema:PostalAddress ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "street address" .
+
+
+###  https://schema.org/telephone
+schema:telephone rdf:type owl:DatatypeProperty ;
+                 rdfs:domain schema:Hospital ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "telephone" .
+
+
+###  https://w3id.org/def/salud/hospital#ccnCode
+hosp:ccnCode rdf:type owl:DatatypeProperty ;
+             rdfs:domain schema:Hospital ;
+             rdfs:range xsd:string ;
+             rdfs:label "ccn code" .
+
+
+###  https://w3id.org/def/salud/hospital#cnhCode
+hosp:cnhCode rdf:type owl:DatatypeProperty ;
+             rdfs:domain schema:Hospital ;
+             rdfs:range xsd:string ;
+             rdfs:label "cnh code" .
+
+
+###  https://w3id.org/def/salud/hospital#numberOfBeds
+hosp:numberOfBeds rdf:type owl:DatatypeProperty ;
+                  rdfs:domain schema:Hospital ;
+                  rdfs:range xsd:int ;
+                  rdfs:label "number of beds" .
+
+
+###  https://w3id.org/def/salud/hospital#teachingAccreditation
+hosp:teachingAccreditation rdf:type owl:DatatypeProperty ;
+                           rdfs:domain schema:Hospital ;
+                           rdfs:range xsd:boolean ;
+                           rdfs:label "teaching accreditation" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://schema.org/AdministrativeArea
+schema:AdministrativeArea rdf:type owl:Class ;
+                          rdfs:label "Administrative Area" .
+
+
+###  https://schema.org/CivicStructure
+schema:CivicStructure rdf:type owl:Class ;
+                      rdfs:subClassOf schema:Place ;
+                      rdfs:label "Civic Structure" .
+
+
+###  https://schema.org/Country
+schema:Country rdf:type owl:Class ;
+               rdfs:label "Country" .
+
+
+###  https://schema.org/Hospital
+schema:Hospital rdf:type owl:Class ;
+                rdfs:subClassOf schema:CivicStructure ,
+                                schema:MedicalOrganization ;
+                rdfs:label "Hospital" .
+
+
+###  https://schema.org/MedicalOrganization
+schema:MedicalOrganization rdf:type owl:Class ;
+                           rdfs:subClassOf schema:Organization ;
+                           rdfs:label "Medical Organization" .
+
+
+###  https://schema.org/Organization
+schema:Organization rdf:type owl:Class ;
+                    rdfs:label "Organization" .
+
+
+###  https://schema.org/Place
+schema:Place rdf:type owl:Class ;
+             rdfs:label "Place" .
+
+
+###  https://schema.org/PostalAddress
+schema:PostalAddress rdf:type owl:Class ;
+                     rdfs:label "Postal Address" .
+
+
+###  https://w3id.org/def/salud/hospital#AutonomousCommunity
+hosp:AutonomousCommunity rdf:type owl:Class ;
+                         rdfs:subClassOf schema:AdministrativeArea ;
+                         rdfs:label "Autonomous Community" .
+
+
+###  https://w3id.org/def/salud/hospital#ConcertAgreement
+hosp:ConcertAgreement rdf:type owl:Class ;
+                      rdfs:label "Concert Agreement" .
+
+
+###  https://w3id.org/def/salud/hospital#FunctionalDependency
+hosp:FunctionalDependency rdf:type owl:Class ;
+                          rdfs:label "Functional Dependency" .
+
+
+###  https://w3id.org/def/salud/hospital#HospitalType
+hosp:HospitalType rdf:type owl:Class ;
+                  rdfs:label "Hospital Type" .
+
+
+###  https://w3id.org/def/salud/hospital#Municipality
+hosp:Municipality rdf:type owl:Class ;
+                  rdfs:subClassOf schema:AdministrativeArea ;
+                  rdfs:label "Municipality" .
+
+
+###  https://w3id.org/def/salud/hospital#Province
+hosp:Province rdf:type owl:Class ;
+              rdfs:subClassOf schema:AdministrativeArea ;
+              rdfs:label "Province" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/def/salud/hospital#andalucia
+hosp:andalucia rdf:type owl:NamedIndividual ,
+                        hosp:AutonomousCommunity ;
+               hosp:containedInCountry hosp:españa .
+
+
+###  https://w3id.org/def/salud/hospital#badajoz
+hosp:badajoz rdf:type owl:NamedIndividual ,
+                      hosp:Province ;
+             hosp:containedInRegion hosp:extremadura .
+
+
+###  https://w3id.org/def/salud/hospital#castillayLeon
+hosp:castillayLeon rdf:type owl:NamedIndividual ,
+                            hosp:AutonomousCommunity ;
+                   hosp:containedInCountry hosp:españa .
+
+
+###  https://w3id.org/def/salud/hospital#conciertoParcial
+hosp:conciertoParcial rdf:type owl:NamedIndividual ,
+                               hosp:ConcertAgreement .
+
+
+###  https://w3id.org/def/salud/hospital#direccionHospitalSanRafael
+hosp:direccionHospitalSanRafael rdf:type owl:NamedIndividual ,
+                                         schema:PostalAddress ;
+                                schema:addressCountry hosp:españa ;
+                                schema:addressLocality hosp:municipioCadiz ;
+                                schema:addressRegion hosp:andalucia ;
+                                hosp:addressProvince hosp:provinciaCadiz ;
+                                schema:postalCode "11002" ;
+                                schema:streetAddress "Calle Diego Arias, 2" .
+
+
+###  https://w3id.org/def/salud/hospital#direccionHospitaldeMerida
+hosp:direccionHospitaldeMerida rdf:type owl:NamedIndividual ,
+                                        schema:PostalAddress ;
+                               schema:addressCountry hosp:españa ;
+                               schema:addressLocality hosp:merida ;
+                               schema:addressRegion hosp:extremadura ;
+                               hosp:addressProvince hosp:badajoz ;
+                               schema:postalCode "06800" ;
+                               schema:streetAddress "Avenida Don Antonio Campos Hoyos, 26" .
+
+
+###  https://w3id.org/def/salud/hospital#direccionHospitaldeZamudio
+hosp:direccionHospitaldeZamudio rdf:type owl:NamedIndividual ,
+                                         schema:PostalAddress ;
+                                schema:addressCountry hosp:españa ;
+                                schema:addressLocality hosp:zamudio ;
+                                schema:addressRegion hosp:paisVasco ;
+                                hosp:addressProvince hosp:vizcaya ;
+                                schema:postalCode "48170" ;
+                                schema:streetAddress "Barrio Arteaga, 45" .
+
+
+###  https://w3id.org/def/salud/hospital#direccionHospitaldelaReina
+hosp:direccionHospitaldelaReina rdf:type owl:NamedIndividual ,
+                                         schema:PostalAddress ;
+                                schema:addressCountry hosp:españa ;
+                                schema:addressLocality hosp:ponferrada ;
+                                schema:addressRegion hosp:castillayLeon ;
+                                hosp:addressProvince hosp:leon ;
+                                schema:postalCode "24401" ;
+                                schema:streetAddress "Calle Hospital, 28" .
+
+
+###  https://w3id.org/def/salud/hospital#españa
+hosp:españa rdf:type owl:NamedIndividual ,
+                     schema:Country .
+
+
+###  https://w3id.org/def/salud/hospital#extremadura
+hosp:extremadura rdf:type owl:NamedIndividual ,
+                          hosp:AutonomousCommunity ;
+                 hosp:containedInCountry hosp:españa .
+
+
+###  https://w3id.org/def/salud/hospital#hospitalGeneral
+hosp:hospitalGeneral rdf:type owl:NamedIndividual ,
+                              hosp:HospitalType .
+
+
+###  https://w3id.org/def/salud/hospital#hospitalSanRafael
+hosp:hospitalSanRafael rdf:type owl:NamedIndividual ,
+                                schema:Hospital ;
+                       schema:address hosp:direccionHospitalSanRafael ;
+                       hosp:hasConcertAgreement hosp:redUtilizacionPublica ;
+                       hosp:hasFunctionalDependency hosp:privado ;
+                       hosp:hasHospitalType hosp:hospitalGeneral ;
+                       schema:name "Hospital San Rafael" ;
+                       schema:telephone "956017267" ;
+                       hosp:ccnCode "0111000285" ;
+                       hosp:cnhCode "110051" ;
+                       hosp:numberOfBeds 280 ;
+                       hosp:teachingAccreditation "false"^^xsd:boolean .
+
+
+###  https://w3id.org/def/salud/hospital#hospitaldeMerida
+hosp:hospitaldeMerida rdf:type owl:NamedIndividual ,
+                               schema:Hospital ;
+                      schema:address hosp:direccionHospitaldeMerida ;
+                      hosp:hasConcertAgreement hosp:sinConcierto ;
+                      hosp:hasFunctionalDependency hosp:servicioeInstitutodeSaluddelasComunidadesAutonomas ;
+                      hosp:hasHospitalType hosp:hospitalGeneral ;
+                      schema:name "Hospital de Mérida" ;
+                      schema:telephone "924381000" ;
+                      hosp:ccnCode "1106000795" ;
+                      hosp:cnhCode "060129" ;
+                      hosp:numberOfBeds 331 ;
+                      hosp:teachingAccreditation "false"^^xsd:boolean .
+
+
+###  https://w3id.org/def/salud/hospital#hospitaldeSaludMentalyTratamientodeToxicomanias
+hosp:hospitaldeSaludMentalyTratamientodeToxicomanias rdf:type owl:NamedIndividual ,
+                                                              hosp:HospitalType .
+
+
+###  https://w3id.org/def/salud/hospital#hospitaldeZamudio
+hosp:hospitaldeZamudio rdf:type owl:NamedIndividual ,
+                                schema:Hospital ;
+                       schema:address hosp:direccionHospitaldeZamudio ;
+                       hosp:hasConcertAgreement hosp:sinConcierto ;
+                       hosp:hasFunctionalDependency hosp:servicioeInstitutodeSaluddelasComunidadesAutonomas ;
+                       hosp:hasHospitalType hosp:hospitaldeSaludMentalyTratamientodeToxicomanias ;
+                       schema:name "Hospital de Zamudio" ;
+                       schema:telephone "944006524" ;
+                       hosp:ccnCode "1648000026" ;
+                       hosp:cnhCode "480274" ;
+                       hosp:numberOfBeds 142 ;
+                       hosp:teachingAccreditation "false"^^xsd:boolean .
+
+
+###  https://w3id.org/def/salud/hospital#hospitaldelaReina
+hosp:hospitaldelaReina rdf:type owl:NamedIndividual ,
+                                schema:Hospital ;
+                       schema:address hosp:direccionHospitaldelaReina ;
+                       hosp:hasConcertAgreement hosp:conciertoParcial ;
+                       hosp:hasFunctionalDependency hosp:organizacionNoGubernamental ;
+                       hosp:hasHospitalType hosp:hospitalGeneral ;
+                       schema:name "Hospital de la Reina" ;
+                       schema:telephone "987409109" ;
+                       hosp:ccnCode "0724001716" ;
+                       hosp:cnhCode "240140" ;
+                       hosp:numberOfBeds 72 ;
+                       hosp:teachingAccreditation "false"^^xsd:boolean .
+
+
+###  https://w3id.org/def/salud/hospital#leon
+hosp:leon rdf:type owl:NamedIndividual ,
+                   hosp:Province ;
+          hosp:containedInRegion hosp:castillayLeon .
+
+
+###  https://w3id.org/def/salud/hospital#merida
+hosp:merida rdf:type owl:NamedIndividual ,
+                     hosp:Municipality ;
+            hosp:containedInProvince hosp:badajoz .
+
+
+###  https://w3id.org/def/salud/hospital#municipioCadiz
+hosp:municipioCadiz rdf:type owl:NamedIndividual ,
+                             hosp:Municipality ;
+                    hosp:containedInProvince hosp:provinciaCadiz .
+
+
+###  https://w3id.org/def/salud/hospital#organizacionNoGubernamental
+hosp:organizacionNoGubernamental rdf:type owl:NamedIndividual ,
+                                          hosp:FunctionalDependency .
+
+
+###  https://w3id.org/def/salud/hospital#paisVasco
+hosp:paisVasco rdf:type owl:NamedIndividual ,
+                        hosp:AutonomousCommunity ;
+               hosp:containedInCountry hosp:españa .
+
+
+###  https://w3id.org/def/salud/hospital#ponferrada
+hosp:ponferrada rdf:type owl:NamedIndividual ,
+                         hosp:Municipality ;
+                hosp:containedInProvince hosp:leon .
+
+
+###  https://w3id.org/def/salud/hospital#privado
+hosp:privado rdf:type owl:NamedIndividual ,
+                      hosp:FunctionalDependency .
+
+
+###  https://w3id.org/def/salud/hospital#provinciaCadiz
+hosp:provinciaCadiz rdf:type owl:NamedIndividual ,
+                             hosp:Province ;
+                    hosp:containedInRegion hosp:andalucia .
+
+
+###  https://w3id.org/def/salud/hospital#redUtilizacionPublica
+hosp:redUtilizacionPublica rdf:type owl:NamedIndividual ,
+                                    hosp:ConcertAgreement .
+
+
+###  https://w3id.org/def/salud/hospital#servicioeInstitutodeSaluddelasComunidadesAutonomas
+hosp:servicioeInstitutodeSaluddelasComunidadesAutonomas rdf:type owl:NamedIndividual ,
+                                                                 hosp:FunctionalDependency .
+
+
+###  https://w3id.org/def/salud/hospital#sinConcierto
+hosp:sinConcierto rdf:type owl:NamedIndividual ,
+                           hosp:ConcertAgreement .
+
+
+###  https://w3id.org/def/salud/hospital#vizcaya
+hosp:vizcaya rdf:type owl:NamedIndividual ,
+                      hosp:Province ;
+             hosp:containedInRegion hosp:paisVasco .
+
+
+###  https://w3id.org/def/salud/hospital#zamudio
+hosp:zamudio rdf:type owl:NamedIndividual ,
+                      hosp:Municipality ;
+             hosp:containedInProvince hosp:vizcaya .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
