@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/hospital-ontology#"
-     xml:base="https://w3id.org/hospital-ontology"
+<rdf:RDF xmlns="https://w3id.org/def/salud/hospital#"
+     xml:base="https://w3id.org/def/salud/hospital"
      xmlns:mod="https://w3id.org/mod#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:hosp="https://w3id.org/hospital-ontology#"
+     xmlns:hosp="https://w3id.org/def/salud/hospital#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:schema="https://schema.org/"
      xmlns:dcterms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://w3id.org/hospital-ontology#">
-        <owl:versionIRI rdf:resource="https://w3id.org/hospital-ontology/0.1"/>
+    <owl:Ontology rdf:about="https://w3id.org/def/salud/hospital#">
+        <owl:versionIRI rdf:resource="https://w3id.org/def/salud/hospital/0.1"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-10</dcterms:created>
         <dcterms:creator>Laura Gilgado Romero</dcterms:creator>
         <dcterms:description xml:lang="es">Ontología que describe los elementos asociados a los hospitales, entendidos como infraestructura sanitaria.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dcterms:title xml:lang="es">Ontología para la representación de hospitales</dcterms:title>
         <vann:preferredNamespacePrefix>hosp</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/hospital-ontology#"/>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/def/salud/hospital#"/>
         <owl:versionInfo>0.1</owl:versionInfo>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
     </owl:Ontology>
@@ -149,7 +149,7 @@
 
     <owl:ObjectProperty rdf:about="https://schema.org/addressLocality">
         <rdfs:domain rdf:resource="https://schema.org/PostalAddress"/>
-        <rdfs:range rdf:resource="https://w3id.org/hospital-ontology#Municipality"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/salud/hospital#Municipality"/>
         <rdfs:label>address locality</rdfs:label>
     </owl:ObjectProperty>
     
@@ -159,57 +159,57 @@
 
     <owl:ObjectProperty rdf:about="https://schema.org/addressRegion">
         <rdfs:domain rdf:resource="https://schema.org/PostalAddress"/>
-        <rdfs:range rdf:resource="https://w3id.org/hospital-ontology#AutonomousCommunity"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/salud/hospital#AutonomousCommunity"/>
         <rdfs:label>address region</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/hospital-ontology#containedInCountry -->
+    <!-- https://w3id.org/def/salud/hospital#containedInCountry -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/hospital-ontology#containedInCountry">
-        <rdfs:domain rdf:resource="https://w3id.org/hospital-ontology#AutonomousCommunity"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/salud/hospital#containedInCountry">
+        <rdfs:domain rdf:resource="https://w3id.org/def/salud/hospital#AutonomousCommunity"/>
         <rdfs:range rdf:resource="https://schema.org/Country"/>
         <rdfs:label>contained in country</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/hospital-ontology#containedInRegion -->
+    <!-- https://w3id.org/def/salud/hospital#containedInRegion -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/hospital-ontology#containedInRegion">
-        <rdfs:domain rdf:resource="https://w3id.org/hospital-ontology#Municipality"/>
-        <rdfs:range rdf:resource="https://w3id.org/hospital-ontology#AutonomousCommunity"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/salud/hospital#containedInRegion">
+        <rdfs:domain rdf:resource="https://w3id.org/def/salud/hospital#Municipality"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/salud/hospital#AutonomousCommunity"/>
         <rdfs:label>contained in region</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/hospital-ontology#hasConcertAgreement -->
+    <!-- https://w3id.org/def/salud/hospital#hasConcertAgreement -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/hospital-ontology#hasConcertAgreement">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/salud/hospital#hasConcertAgreement">
         <rdfs:domain rdf:resource="https://schema.org/Hospital"/>
-        <rdfs:range rdf:resource="https://w3id.org/hospital-ontology#ConcertAgreement"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/salud/hospital#ConcertAgreement"/>
         <rdfs:label>has concert agreement</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/hospital-ontology#hasFunctionalDependency -->
+    <!-- https://w3id.org/def/salud/hospital#hasFunctionalDependency -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/hospital-ontology#hasFunctionalDependency">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/salud/hospital#hasFunctionalDependency">
         <rdfs:domain rdf:resource="https://schema.org/Hospital"/>
-        <rdfs:range rdf:resource="https://w3id.org/hospital-ontology#FunctionalDependency"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/salud/hospital#FunctionalDependency"/>
         <rdfs:label>has functional dependency</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/hospital-ontology#hasHospitalType -->
+    <!-- https://w3id.org/def/salud/hospital#hasHospitalType -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/hospital-ontology#hasHospitalType">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/salud/hospital#hasHospitalType">
         <rdfs:domain rdf:resource="https://schema.org/Hospital"/>
-        <rdfs:range rdf:resource="https://w3id.org/hospital-ontology#HospitalType"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/salud/hospital#HospitalType"/>
         <rdfs:label>has hospital type</rdfs:label>
     </owl:ObjectProperty>
     
@@ -266,9 +266,9 @@
     
 
 
-    <!-- https://w3id.org/hospital-ontology#ccnCode -->
+    <!-- https://w3id.org/def/salud/hospital#ccnCode -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/hospital-ontology#ccnCode">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/salud/hospital#ccnCode">
         <rdfs:domain rdf:resource="https://schema.org/Hospital"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label>ccn code</rdfs:label>
@@ -276,9 +276,9 @@
     
 
 
-    <!-- https://w3id.org/hospital-ontology#cnhCode -->
+    <!-- https://w3id.org/def/salud/hospital#cnhCode -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/hospital-ontology#cnhCode">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/salud/hospital#cnhCode">
         <rdfs:domain rdf:resource="https://schema.org/Hospital"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label>cnh code</rdfs:label>
@@ -286,9 +286,9 @@
     
 
 
-    <!-- https://w3id.org/hospital-ontology#numberOfBeds -->
+    <!-- https://w3id.org/def/salud/hospital#numberOfBeds -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/hospital-ontology#numberOfBeds">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/salud/hospital#numberOfBeds">
         <rdfs:domain rdf:resource="https://schema.org/Hospital"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label>number of beds</rdfs:label>
@@ -296,9 +296,9 @@
     
 
 
-    <!-- https://w3id.org/hospital-ontology#teachingAccreditation -->
+    <!-- https://w3id.org/def/salud/hospital#teachingAccreditation -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/hospital-ontology#teachingAccreditation">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/salud/hospital#teachingAccreditation">
         <rdfs:domain rdf:resource="https://schema.org/Hospital"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:label>teaching accreditation</rdfs:label>
@@ -385,42 +385,42 @@
     
 
 
-    <!-- https://w3id.org/hospital-ontology#AutonomousCommunity -->
+    <!-- https://w3id.org/def/salud/hospital#AutonomousCommunity -->
 
-    <owl:Class rdf:about="https://w3id.org/hospital-ontology#AutonomousCommunity">
+    <owl:Class rdf:about="https://w3id.org/def/salud/hospital#AutonomousCommunity">
         <rdfs:subClassOf rdf:resource="https://schema.org/AdministrativeArea"/>
         <rdfs:label>Autonomous Community</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/hospital-ontology#ConcertAgreement -->
+    <!-- https://w3id.org/def/salud/hospital#ConcertAgreement -->
 
-    <owl:Class rdf:about="https://w3id.org/hospital-ontology#ConcertAgreement">
+    <owl:Class rdf:about="https://w3id.org/def/salud/hospital#ConcertAgreement">
         <rdfs:label>Concert Agreement</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/hospital-ontology#FunctionalDependency -->
+    <!-- https://w3id.org/def/salud/hospital#FunctionalDependency -->
 
-    <owl:Class rdf:about="https://w3id.org/hospital-ontology#FunctionalDependency">
+    <owl:Class rdf:about="https://w3id.org/def/salud/hospital#FunctionalDependency">
         <rdfs:label>Functional Dependency</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/hospital-ontology#HospitalType -->
+    <!-- https://w3id.org/def/salud/hospital#HospitalType -->
 
-    <owl:Class rdf:about="https://w3id.org/hospital-ontology#HospitalType">
+    <owl:Class rdf:about="https://w3id.org/def/salud/hospital#HospitalType">
         <rdfs:label>Hospital Type</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/hospital-ontology#Municipality -->
+    <!-- https://w3id.org/def/salud/hospital#Municipality -->
 
-    <owl:Class rdf:about="https://w3id.org/hospital-ontology#Municipality">
+    <owl:Class rdf:about="https://w3id.org/def/salud/hospital#Municipality">
         <rdfs:subClassOf rdf:resource="https://schema.org/AdministrativeArea"/>
         <rdfs:label>Municipality</rdfs:label>
     </owl:Class>
