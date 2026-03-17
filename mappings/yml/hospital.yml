@@ -1,0 +1,98 @@
+prefixes:
+  hosp: "https://w3id.org/def/salud/hospital#"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  schema: "https://schema.org/"
+
+sources:
+  hospital-source: [dataset-enriquecido.csv~csv]
+
+mappings:
+  Hospital:
+    sources:
+      - hospital-source
+    s: https://w3id.org/salud/recurso/hospital/$(Código CCN)
+    po:
+      - [a, schema:Hospital]
+      - [hosp:ccnCode, $(Código CCN), xsd:string]
+      - [hosp:cnhCode, $(Código CNH), xsd:string]
+      - [schema:name, $(Nombre)]
+      - [schema:telephone, $(Teléfono), xsd:string]
+      - [hosp:numberOfBeds, $(Número de camas), xsd:integer]
+      - [hosp:teachingAccreditation, $(Acreditación docente), xsd:boolean]
+      - [hosp:hasFunctionalDependency, https://w3id.org/salud/recurso/hospital/functionalDependency/$(Dependencia funcional)~iri]
+      - [hosp:hasHospitalType, https://w3id.org/salud/recurso/hospital/hospitalType/$(Tipo de centro)~iri]
+      - [schema:address, https://w3id.org/salud/recurso/hospital/$(Código CCN)/address~iri]
+      - [hosp:hasConcertAgreement, https://w3id.org/salud/recurso/hospital/concertAgreement/$(Concierto)~iri]
+
+  FunctionalDependency:
+    sources:
+      - hospital-source
+    s: https://w3id.org/salud/recurso/hospital/functionalDependency/$(Dependencia funcional)
+    po:
+      - [a, hosp:FunctionalDependency]
+      - [rdfs:label, $(Dependencia funcional), xsd:string]
+    
+  HospitalType:
+    sources:
+      - hospital-source
+    s: https://w3id.org/salud/recurso/hospital/hospitalType/$(Tipo de centro)
+    po:
+      - [a, hosp:HospitalType]
+      - [rdfs:label, $(Tipo de centro), xsd:string]
+
+  PostalAddress:
+    sources:
+      - hospital-source
+    s: https://w3id.org/salud/recurso/hospital/$(Código CCN)/address
+    po:
+      - [a, schema:PostalAddress]
+      - [schema:streetAddress, $(Dirección)]
+      - [schema:postalCode, $(Código postal), xsd:string]
+      - [schema:addressLocality, https://w3id.org/salud/recurso/hospital/municipality/$(Municipio)~iri]
+      - [hosp:addressProvince, https://w3id.org/salud/recurso/hospital/province/$(Provincia)~iri]
+      - [schema:addressRegion, https://w3id.org/salud/recurso/hospital/autonomousCommunity/$(Comunidad autónoma)~iri]
+      - [schema:addressCountry, https://w3id.org/salud/recurso/hospital/country/$(País)~iri]
+
+  ConcertAgreement:
+    sources:
+      - hospital-source
+    s: https://w3id.org/salud/recurso/hospital/concertAgreement/$(Concierto)
+    po:
+      - [a, hosp:ConcertAgreement]
+      - [rdfs:label, $(Concierto), xsd:string]
+    
+  Municipality:
+    sources:
+      - hospital-source
+    s: https://w3id.org/salud/recurso/hospital/municipality/$(Municipio)
+    po:
+      - [a, hosp:Municipality]
+      - [hosp:containedInProvince, https://w3id.org/salud/recurso/hospital/province/$(Provincia)~iri]
+      - [rdfs:label, $(Municipio), xsd:string]
+
+  Province:
+    sources:
+      - hospital-source
+    s: https://w3id.org/salud/recurso/hospital/province/$(Provincia)
+    po:
+      - [a, hosp:Province]
+      - [hosp:containedInRegion, https://w3id.org/salud/recurso/hospital/autonomousCommunity/$(Comunidad autónoma)~iri]
+      - [rdfs:label, $(Provincia), xsd:string]
+
+  AutonomousCommunity:
+    sources:
+      - hospital-source
+    s: https://w3id.org/salud/recurso/hospital/autonomousCommunity/$(Comunidad autónoma)
+    po:
+      - [a, hosp:AutonomousCommunity]
+      - [hosp:containedInCountry, https://w3id.org/salud/recurso/hospital/country/$(País)~iri]
+      - [rdfs:label, $(Comunidad autónoma), xsd:string]
+
+  Country:
+    sources:
+      - hospital-source
+    s: https://w3id.org/salud/recurso/hospital/country/$(País)
+    po:
+      - [a, schema:Country]
+      - [rdfs:label, $(País), xsd:string]
