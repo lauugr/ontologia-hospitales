@@ -304,39 +304,43 @@ hosp:Province rdf:type owl:Class ;
 ###  https://w3id.org/def/salud/hospital#andalucia
 hosp:andalucia rdf:type owl:NamedIndividual ,
                         hosp:AutonomousCommunity ;
+               rdfs:label "Andalucía"@es ;
                hosp:containedInCountry hosp:españa .
 
 
 ###  https://w3id.org/def/salud/hospital#badajoz
 hosp:badajoz rdf:type owl:NamedIndividual ,
                       hosp:Province ;
+             rdfs:label "Badajoz"@es ;
              hosp:containedInRegion hosp:extremadura .
 
 
-###  https://w3id.org/def/salud/hospital#castillayLeon
-hosp:castillayLeon rdf:type owl:NamedIndividual ,
+###  https://w3id.org/def/salud/hospital#castillaYLeon
+hosp:castillaYLeon rdf:type owl:NamedIndividual ,
                             hosp:AutonomousCommunity ;
+                   rdfs:label "Castilla y León"@es ;
                    hosp:containedInCountry hosp:españa .
 
 
 ###  https://w3id.org/def/salud/hospital#conciertoParcial
 hosp:conciertoParcial rdf:type owl:NamedIndividual ,
-                               hosp:ConcertAgreement .
+                               hosp:ConcertAgreement ;
+                   rdfs:label "Concierto parcial"@es .
 
 
 ###  https://w3id.org/def/salud/hospital#direccionHospitalSanRafael
 hosp:direccionHospitalSanRafael rdf:type owl:NamedIndividual ,
                                          schema:PostalAddress ;
                                 schema:addressCountry hosp:españa ;
-                                schema:addressLocality hosp:municipioCadiz ;
+                                schema:addressLocality hosp:cadiz ;
                                 schema:addressRegion hosp:andalucia ;
-                                hosp:addressProvince hosp:provinciaCadiz ;
+                                hosp:addressProvince hosp:cadizProvincia ;
                                 schema:postalCode "11002" ;
                                 schema:streetAddress "Calle Diego Arias, 2" .
 
 
-###  https://w3id.org/def/salud/hospital#direccionHospitaldeMerida
-hosp:direccionHospitaldeMerida rdf:type owl:NamedIndividual ,
+###  https://w3id.org/def/salud/hospital#direccionHospitalDeMerida
+hosp:direccionHospitalDeMerida rdf:type owl:NamedIndividual ,
                                         schema:PostalAddress ;
                                schema:addressCountry hosp:españa ;
                                schema:addressLocality hosp:merida ;
@@ -346,8 +350,8 @@ hosp:direccionHospitaldeMerida rdf:type owl:NamedIndividual ,
                                schema:streetAddress "Avenida Don Antonio Campos Hoyos, 26" .
 
 
-###  https://w3id.org/def/salud/hospital#direccionHospitaldeZamudio
-hosp:direccionHospitaldeZamudio rdf:type owl:NamedIndividual ,
+###  https://w3id.org/def/salud/hospital#direccionHospitalDeZamudio
+hosp:direccionHospitalDeZamudio rdf:type owl:NamedIndividual ,
                                          schema:PostalAddress ;
                                 schema:addressCountry hosp:españa ;
                                 schema:addressLocality hosp:zamudio ;
@@ -357,12 +361,12 @@ hosp:direccionHospitaldeZamudio rdf:type owl:NamedIndividual ,
                                 schema:streetAddress "Barrio Arteaga, 45" .
 
 
-###  https://w3id.org/def/salud/hospital#direccionHospitaldelaReina
-hosp:direccionHospitaldelaReina rdf:type owl:NamedIndividual ,
+###  https://w3id.org/def/salud/hospital#direccionHospitalDeLaReina
+hosp:direccionHospitalDeLaReina rdf:type owl:NamedIndividual ,
                                          schema:PostalAddress ;
                                 schema:addressCountry hosp:españa ;
                                 schema:addressLocality hosp:ponferrada ;
-                                schema:addressRegion hosp:castillayLeon ;
+                                schema:addressRegion hosp:castillaYLeon ;
                                 hosp:addressProvince hosp:leon ;
                                 schema:postalCode "24401" ;
                                 schema:streetAddress "Calle Hospital, 28" .
@@ -370,23 +374,27 @@ hosp:direccionHospitaldelaReina rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/def/salud/hospital#españa
 hosp:españa rdf:type owl:NamedIndividual ,
-                     schema:Country .
+                     schema:Country ;
+            rdfs:label "España"@es .
 
 
 ###  https://w3id.org/def/salud/hospital#extremadura
 hosp:extremadura rdf:type owl:NamedIndividual ,
                           hosp:AutonomousCommunity ;
+                 rdfs:label "Extremadura"@es ;
                  hosp:containedInCountry hosp:españa .
 
 
 ###  https://w3id.org/def/salud/hospital#hospitalGeneral
 hosp:hospitalGeneral rdf:type owl:NamedIndividual ,
-                              hosp:HospitalType .
+                              hosp:HospitalType ;
+                     rdfs:label "Hospitales generales"@es .
 
 
 ###  https://w3id.org/def/salud/hospital#hospitalSanRafael
 hosp:hospitalSanRafael rdf:type owl:NamedIndividual ,
                                 schema:Hospital ;
+                       rdfs:label "Hospital San Rafael"@es ;
                        schema:address hosp:direccionHospitalSanRafael ;
                        hosp:hasConcertAgreement hosp:redUtilizacionPublica ;
                        hosp:hasFunctionalDependency hosp:privado ;
@@ -396,48 +404,52 @@ hosp:hospitalSanRafael rdf:type owl:NamedIndividual ,
                        hosp:ccnCode "0111000285" ;
                        hosp:cnhCode "110051" ;
                        hosp:numberOfBeds 280 ;
-                       hosp:teachingAccreditation "false"^^xsd:boolean .
+                       hosp:teachingAccreditation false .
 
 
-###  https://w3id.org/def/salud/hospital#hospitaldeMerida
-hosp:hospitaldeMerida rdf:type owl:NamedIndividual ,
+###  https://w3id.org/def/salud/hospital#hospitalDeMerida
+hosp:hospitalDeMerida rdf:type owl:NamedIndividual ,
                                schema:Hospital ;
-                      schema:address hosp:direccionHospitaldeMerida ;
+                      rdfs:label "Hospital de Mérida"@es ;
+                      schema:address hosp:direccionHospitalDeMerida ;
                       hosp:hasConcertAgreement hosp:sinConcierto ;
-                      hosp:hasFunctionalDependency hosp:servicioeInstitutodeSaluddelasComunidadesAutonomas ;
+                      hosp:hasFunctionalDependency hosp:servicioInstitutoSaludComunidadesAutonomas ;
                       hosp:hasHospitalType hosp:hospitalGeneral ;
                       schema:name "Hospital de Mérida" ;
                       schema:telephone "924381000" ;
                       hosp:ccnCode "1106000795" ;
                       hosp:cnhCode "060129" ;
                       hosp:numberOfBeds 331 ;
-                      hosp:teachingAccreditation "false"^^xsd:boolean .
+                      hosp:teachingAccreditation false .
 
 
-###  https://w3id.org/def/salud/hospital#hospitaldeSaludMentalyTratamientodeToxicomanias
-hosp:hospitaldeSaludMentalyTratamientodeToxicomanias rdf:type owl:NamedIndividual ,
-                                                              hosp:HospitalType .
+###  https://w3id.org/def/salud/hospital#hospitalSaludMentalTratamientoToxicomanias
+hosp:hospitalSaludMentalTratamientoToxicomanias rdf:type owl:NamedIndividual ,
+                                                              hosp:HospitalType ;
+                                                rdfs:label "Hospitales de salud mental y tratamiento de toxicomanías"@es .
 
 
-###  https://w3id.org/def/salud/hospital#hospitaldeZamudio
-hosp:hospitaldeZamudio rdf:type owl:NamedIndividual ,
+###  https://w3id.org/def/salud/hospital#hospitalDeZamudio
+hosp:hospitalDeZamudio rdf:type owl:NamedIndividual ,
                                 schema:Hospital ;
-                       schema:address hosp:direccionHospitaldeZamudio ;
+                       rdfs:label "Hospital de Zamudio"@es ;
+                       schema:address hosp:direccionHospitalDeZamudio ;
                        hosp:hasConcertAgreement hosp:sinConcierto ;
-                       hosp:hasFunctionalDependency hosp:servicioeInstitutodeSaluddelasComunidadesAutonomas ;
-                       hosp:hasHospitalType hosp:hospitaldeSaludMentalyTratamientodeToxicomanias ;
+                       hosp:hasFunctionalDependency hosp:servicioInstitutoSaludComunidadesAutonomas ;
+                       hosp:hasHospitalType hosp:hospitalSaludMentalTratamientoToxicomanias ;
                        schema:name "Hospital de Zamudio" ;
                        schema:telephone "944006524" ;
                        hosp:ccnCode "1648000026" ;
                        hosp:cnhCode "480274" ;
                        hosp:numberOfBeds 142 ;
-                       hosp:teachingAccreditation "false"^^xsd:boolean .
+                       hosp:teachingAccreditation false .
 
 
-###  https://w3id.org/def/salud/hospital#hospitaldelaReina
-hosp:hospitaldelaReina rdf:type owl:NamedIndividual ,
+###  https://w3id.org/def/salud/hospital#hospitalDeLaReina
+hosp:hospitalDeLaReina rdf:type owl:NamedIndividual ,
                                 schema:Hospital ;
-                       schema:address hosp:direccionHospitaldelaReina ;
+                       rdfs:label "Hospital de la Reina"@es ;
+                       schema:address hosp:direccionHospitalDeLaReina ;
                        hosp:hasConcertAgreement hosp:conciertoParcial ;
                        hosp:hasFunctionalDependency hosp:organizacionNoGubernamental ;
                        hosp:hasHospitalType hosp:hospitalGeneral ;
@@ -446,79 +458,92 @@ hosp:hospitaldelaReina rdf:type owl:NamedIndividual ,
                        hosp:ccnCode "0724001716" ;
                        hosp:cnhCode "240140" ;
                        hosp:numberOfBeds 72 ;
-                       hosp:teachingAccreditation "false"^^xsd:boolean .
+                       hosp:teachingAccreditation false .
 
 
 ###  https://w3id.org/def/salud/hospital#leon
 hosp:leon rdf:type owl:NamedIndividual ,
                    hosp:Province ;
-          hosp:containedInRegion hosp:castillayLeon .
+          rdfs:label "León"@es ;
+          hosp:containedInRegion hosp:castillaYLeon .
 
 
 ###  https://w3id.org/def/salud/hospital#merida
 hosp:merida rdf:type owl:NamedIndividual ,
                      hosp:Municipality ;
+            rdfs:label "Mérida"@es ;
             hosp:containedInProvince hosp:badajoz .
 
 
-###  https://w3id.org/def/salud/hospital#municipioCadiz
-hosp:municipioCadiz rdf:type owl:NamedIndividual ,
+###  https://w3id.org/def/salud/hospital#cadiz
+hosp:cadiz rdf:type owl:NamedIndividual ,
                              hosp:Municipality ;
-                    hosp:containedInProvince hosp:provinciaCadiz .
+                    rdfs:label "Cádiz"@es ;
+                    hosp:containedInProvince hosp:cadizProvincia .
 
 
 ###  https://w3id.org/def/salud/hospital#organizacionNoGubernamental
 hosp:organizacionNoGubernamental rdf:type owl:NamedIndividual ,
-                                          hosp:FunctionalDependency .
+                                          hosp:FunctionalDependency ;
+                                 rdfs:label "Organizaciones no gubernamentales"@es .
 
 
 ###  https://w3id.org/def/salud/hospital#paisVasco
 hosp:paisVasco rdf:type owl:NamedIndividual ,
                         hosp:AutonomousCommunity ;
+               rdfs:label "País Vasco"@es ;
                hosp:containedInCountry hosp:españa .
 
 
 ###  https://w3id.org/def/salud/hospital#ponferrada
 hosp:ponferrada rdf:type owl:NamedIndividual ,
                          hosp:Municipality ;
+                rdfs:label "Ponferrada"@es ;
                 hosp:containedInProvince hosp:leon .
 
 
 ###  https://w3id.org/def/salud/hospital#privado
 hosp:privado rdf:type owl:NamedIndividual ,
-                      hosp:FunctionalDependency .
+                      hosp:FunctionalDependency ;
+             rdfs:label "Privados"@es .
 
 
-###  https://w3id.org/def/salud/hospital#provinciaCadiz
-hosp:provinciaCadiz rdf:type owl:NamedIndividual ,
+###  https://w3id.org/def/salud/hospital#cadizProvincia
+hosp:cadizProvincia rdf:type owl:NamedIndividual ,
                              hosp:Province ;
+                    rdfs:label "Cádiz"@es ;
                     hosp:containedInRegion hosp:andalucia .
 
 
 ###  https://w3id.org/def/salud/hospital#redUtilizacionPublica
 hosp:redUtilizacionPublica rdf:type owl:NamedIndividual ,
-                                    hosp:ConcertAgreement .
+                                    hosp:ConcertAgreement ;
+                           rdfs:label "Red de Utilización Pública"@es .
 
 
-###  https://w3id.org/def/salud/hospital#servicioeInstitutodeSaluddelasComunidadesAutonomas
-hosp:servicioeInstitutodeSaluddelasComunidadesAutonomas rdf:type owl:NamedIndividual ,
-                                                                 hosp:FunctionalDependency .
+###  https://w3id.org/def/salud/hospital#servicioInstitutoSaludComunidadesAutonomas
+hosp:servicioInstitutoSaludComunidadesAutonomas rdf:type owl:NamedIndividual ,
+                                                                 hosp:FunctionalDependency ;
+                                                rdfs:label "Servicios e institutos de salud de las comunidades autónomas"@es .
 
 
 ###  https://w3id.org/def/salud/hospital#sinConcierto
 hosp:sinConcierto rdf:type owl:NamedIndividual ,
-                           hosp:ConcertAgreement .
+                           hosp:ConcertAgreement ;
+                  rdfs:label "Sin concierto"@es .
 
 
 ###  https://w3id.org/def/salud/hospital#vizcaya
 hosp:vizcaya rdf:type owl:NamedIndividual ,
                       hosp:Province ;
+             rdfs:label "Vizcaya"@es ;
              hosp:containedInRegion hosp:paisVasco .
 
 
 ###  https://w3id.org/def/salud/hospital#zamudio
 hosp:zamudio rdf:type owl:NamedIndividual ,
                       hosp:Municipality ;
+             rdfs:label "Zamudio"@es ;
              hosp:containedInProvince hosp:vizcaya .
 
 
