@@ -1,183 +1,295 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix hosp: <https://w3id.org/def/salud/hospital#> .
-@prefix mod: <https://w3id.org/mod#> .
+@prefix : <https://w3id.org/def/salud/hospital#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <https://schema.org/> .
-@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/def/salud/hospital#> .
 
-dcterms:created a owl:AnnotationProperty .
+<https://w3id.org/def/salud/hospital#> rdf:type owl:Ontology ;
+                                        owl:versionIRI <https://w3id.org/def/salud/hospital/0.2> ;
+                                        <http://purl.org/dc/terms/created> "2026-03-10"^^xsd:date ;
+                                        <http://purl.org/dc/terms/creator> "Laura Gilgado Romero" ;
+                                        <http://purl.org/dc/terms/description> "Ontología que describe los elementos asociados a los hospitales, entendidos como infraestructura sanitaria."@es ;
+                                        <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                        <http://purl.org/dc/terms/title> "Ontología para la representación de hospitales"@es ;
+                                        <http://purl.org/vocab/vann/preferredNamespacePrefix> "hosp" ;
+                                        <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/def/salud/hospital#> ;
+                                        owl:versionInfo "0.2" ;
+                                        <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 
-dcterms:creator a owl:AnnotationProperty .
+#################################################################
+#    Annotation properties
+#################################################################
 
-dcterms:description a owl:AnnotationProperty .
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
 
-dcterms:license a owl:AnnotationProperty .
 
-dcterms:title a owl:AnnotationProperty .
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
-vann:preferredNamespacePrefix a owl:AnnotationProperty .
 
-vann:preferredNamespaceUri a owl:AnnotationProperty .
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
 
-owl:versionIRI a owl:AnnotationProperty .
 
-owl:versionInfo a owl:AnnotationProperty .
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
-schema:address a owl:ObjectProperty ;
-    rdfs:label "address" ;
-    rdfs:domain schema:Hospital ;
-    rdfs:range schema:PostalAddress .
 
-schema:addressCountry a owl:ObjectProperty ;
-    rdfs:label "address country" ;
-    rdfs:domain schema:PostalAddress ;
-    rdfs:range schema:Country .
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
-schema:addressLocality a owl:ObjectProperty ;
-    rdfs:label "address locality" ;
-    rdfs:domain schema:PostalAddress ;
-    rdfs:range hosp:Municipality .
 
-schema:addressRegion a owl:ObjectProperty ;
-    rdfs:label "address region" ;
-    rdfs:domain schema:PostalAddress ;
-    rdfs:range hosp:AutonomousCommunity .
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
 
-schema:name a owl:DatatypeProperty ;
-    rdfs:label "name" ;
-    rdfs:domain schema:Hospital ;
-    rdfs:range xsd:string .
 
-schema:postalCode a owl:DatatypeProperty ;
-    rdfs:label "postal code" ;
-    rdfs:domain schema:PostalAddress ;
-    rdfs:range xsd:string .
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
-schema:streetAddress a owl:DatatypeProperty ;
-    rdfs:label "street address" ;
-    rdfs:domain schema:PostalAddress ;
-    rdfs:range xsd:string .
 
-schema:telephone a owl:DatatypeProperty ;
-    rdfs:label "telephone" ;
-    rdfs:domain schema:Hospital ;
-    rdfs:range xsd:string .
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:AnnotationProperty .
 
-hosp:addressProvince a owl:ObjectProperty ;
-    rdfs:label "address province" ;
-    rdfs:domain schema:PostalAddress ;
-    rdfs:range hosp:Province .
 
-hosp:ccnCode a owl:DatatypeProperty ;
-    rdfs:label "ccn code" ;
-    rdfs:domain schema:Hospital ;
-    rdfs:range xsd:string .
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
 
-hosp:cnhCode a owl:DatatypeProperty ;
-    rdfs:label "cnh code" ;
-    rdfs:domain schema:Hospital ;
-    rdfs:range xsd:string .
 
-hosp:containedInCountry a owl:ObjectProperty ;
-    rdfs:label "contained in country" ;
-    rdfs:domain hosp:AutonomousCommunity ;
-    rdfs:range schema:Country .
+###  https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> rdf:type owl:AnnotationProperty .
 
-hosp:containedInProvince a owl:ObjectProperty ;
-    rdfs:label "contained in province" ;
-    rdfs:domain hosp:Municipality ;
-    rdfs:range hosp:Province .
 
-hosp:containedInRegion a owl:ObjectProperty ;
-    rdfs:label "contained in region" ;
-    rdfs:domain hosp:Province ;
-    rdfs:range hosp:AutonomousCommunity .
+#################################################################
+#    Datatypes
+#################################################################
 
-hosp:hasConcertAgreement a owl:ObjectProperty ;
-    rdfs:label "has concert agreement" ;
-    rdfs:domain schema:Hospital ;
-    rdfs:range hosp:ConcertAgreement .
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
 
-hosp:hasFunctionalDependency a owl:ObjectProperty ;
-    rdfs:label "has functional dependency" ;
-    rdfs:domain schema:Hospital ;
-    rdfs:range hosp:FunctionalDependency .
 
-hosp:hasHospitalType a owl:ObjectProperty ;
-    rdfs:label "has hospital type" ;
-    rdfs:domain schema:Hospital ;
-    rdfs:range hosp:HospitalType .
+#################################################################
+#    Object Properties
+#################################################################
 
-hosp:numberOfBeds a owl:DatatypeProperty ;
-    rdfs:label "number of beds" ;
-    rdfs:domain schema:Hospital ;
-    rdfs:range xsd:int .
+###  https://schema.org/address
+<https://schema.org/address> rdf:type owl:ObjectProperty ;
+                             rdfs:domain <https://schema.org/Hospital> ;
+                             rdfs:range <https://schema.org/PostalAddress> ;
+                             rdfs:label "address" .
 
-hosp:teachingAccreditation a owl:DatatypeProperty ;
-    rdfs:label "teaching accreditation" ;
-    rdfs:domain schema:Hospital ;
-    rdfs:range xsd:boolean .
 
-schema:CivicStructure a owl:Class ;
-    rdfs:label "Civic Structure" ;
-    rdfs:subClassOf schema:Place .
+###  https://schema.org/addressCountry
+<https://schema.org/addressCountry> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <https://schema.org/PostalAddress> ;
+                                    rdfs:range <https://schema.org/Country> ;
+                                    rdfs:label "address country" .
 
-schema:MedicalOrganization a owl:Class ;
-    rdfs:label "Medical Organization" ;
-    rdfs:subClassOf schema:Organization .
 
-schema:Organization a owl:Class ;
-    rdfs:label "Organization" .
+###  https://schema.org/addressLocality
+<https://schema.org/addressLocality> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <https://schema.org/PostalAddress> ;
+                                     rdfs:range :Municipality ;
+                                     rdfs:label "address locality" .
 
-schema:Place a owl:Class ;
-    rdfs:label "Place" .
 
-hosp: a owl:Ontology ;
-    dcterms:created "2026-03-10"^^xsd:date ;
-    dcterms:creator "Laura Gilgado Romero" ;
-    dcterms:description "Ontología que describe los elementos asociados a los hospitales, entendidos como infraestructura sanitaria."@es ;
-    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:title "Ontología para la representación de hospitales"@es ;
-    vann:preferredNamespacePrefix "hosp" ;
-    vann:preferredNamespaceUri hosp: ;
-    owl:versionIRI <https://w3id.org/def/salud/hospital/0.2> ;
-    owl:versionInfo "0.2" ;
-    mod:createdWith <https://chowlk.linkeddata.es/> .
+###  https://schema.org/addressRegion
+<https://schema.org/addressRegion> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <https://schema.org/PostalAddress> ;
+                                   rdfs:range :AutonomousCommunity ;
+                                   rdfs:label "address region" .
 
-hosp:ConcertAgreement a owl:Class ;
-    rdfs:label "Concert Agreement" .
 
-hosp:FunctionalDependency a owl:Class ;
-    rdfs:label "Functional Dependency" .
+###  https://w3id.org/def/salud/hospital#addressProvince
+:addressProvince rdf:type owl:ObjectProperty ;
+                 rdfs:domain <https://schema.org/PostalAddress> ;
+                 rdfs:range :Province ;
+                 rdfs:label "address province" .
 
-hosp:HospitalType a owl:Class ;
-    rdfs:label "Hospital Type" .
 
-schema:Country a owl:Class ;
-    rdfs:label "Country" .
+###  https://w3id.org/def/salud/hospital#containedInCountry
+:containedInCountry rdf:type owl:ObjectProperty ;
+                    rdfs:domain :AutonomousCommunity ;
+                    rdfs:range <https://schema.org/Country> ;
+                    rdfs:label "contained in country" .
 
-hosp:Municipality a owl:Class ;
-    rdfs:label "Municipality" ;
-    rdfs:subClassOf schema:AdministrativeArea .
 
-schema:AdministrativeArea a owl:Class ;
-    rdfs:label "Administrative Area" .
+###  https://w3id.org/def/salud/hospital#containedInProvince
+:containedInProvince rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Municipality ;
+                     rdfs:range :Province ;
+                     rdfs:label "contained in province" .
 
-hosp:AutonomousCommunity a owl:Class ;
-    rdfs:label "Autonomous Community" ;
-    rdfs:subClassOf schema:AdministrativeArea .
 
-hosp:Province a owl:Class ;
-    rdfs:label "Province" ;
-    rdfs:subClassOf schema:AdministrativeArea .
+###  https://w3id.org/def/salud/hospital#containedInRegion
+:containedInRegion rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Province ;
+                   rdfs:range :AutonomousCommunity ;
+                   rdfs:label "contained in region" .
 
-schema:PostalAddress a owl:Class ;
-    rdfs:label "Postal Address" .
 
-schema:Hospital a owl:Class ;
-    rdfs:label "Hospital" ;
-    rdfs:subClassOf schema:CivicStructure,
-        schema:MedicalOrganization .
+###  https://w3id.org/def/salud/hospital#hasConcertAgreement
+:hasConcertAgreement rdf:type owl:ObjectProperty ;
+                     rdfs:domain <https://schema.org/Hospital> ;
+                     rdfs:range :ConcertAgreement ;
+                     rdfs:label "has concert agreement" .
 
+
+###  https://w3id.org/def/salud/hospital#hasFunctionalDependency
+:hasFunctionalDependency rdf:type owl:ObjectProperty ;
+                         rdfs:domain <https://schema.org/Hospital> ;
+                         rdfs:range :FunctionalDependency ;
+                         rdfs:label "has functional dependency" .
+
+
+###  https://w3id.org/def/salud/hospital#hasHospitalType
+:hasHospitalType rdf:type owl:ObjectProperty ;
+                 rdfs:domain <https://schema.org/Hospital> ;
+                 rdfs:range :HospitalType ;
+                 rdfs:label "has hospital type" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://schema.org/name
+<https://schema.org/name> rdf:type owl:DatatypeProperty ;
+                          rdfs:domain <https://schema.org/Hospital> ;
+                          rdfs:range xsd:string ;
+                          rdfs:label "name" .
+
+
+###  https://schema.org/postalCode
+<https://schema.org/postalCode> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain <https://schema.org/PostalAddress> ;
+                                rdfs:range xsd:string ;
+                                rdfs:label "postal code" .
+
+
+###  https://schema.org/streetAddress
+<https://schema.org/streetAddress> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain <https://schema.org/PostalAddress> ;
+                                   rdfs:range xsd:string ;
+                                   rdfs:label "street address" .
+
+
+###  https://schema.org/telephone
+<https://schema.org/telephone> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <https://schema.org/Hospital> ;
+                               rdfs:range xsd:string ;
+                               rdfs:label "telephone" .
+
+
+###  https://w3id.org/def/salud/hospital#ccnCode
+:ccnCode rdf:type owl:DatatypeProperty ;
+         rdfs:domain <https://schema.org/Hospital> ;
+         rdfs:range xsd:string ;
+         rdfs:label "ccn code" .
+
+
+###  https://w3id.org/def/salud/hospital#cnhCode
+:cnhCode rdf:type owl:DatatypeProperty ;
+         rdfs:domain <https://schema.org/Hospital> ;
+         rdfs:range xsd:string ;
+         rdfs:label "cnh code" .
+
+
+###  https://w3id.org/def/salud/hospital#numberOfBeds
+:numberOfBeds rdf:type owl:DatatypeProperty ;
+              rdfs:domain <https://schema.org/Hospital> ;
+              rdfs:range xsd:int ;
+              rdfs:label "number of beds" .
+
+
+###  https://w3id.org/def/salud/hospital#teachingAccreditation
+:teachingAccreditation rdf:type owl:DatatypeProperty ;
+                       rdfs:domain <https://schema.org/Hospital> ;
+                       rdfs:range xsd:boolean ;
+                       rdfs:label "teaching accreditation" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://schema.org/AdministrativeArea
+<https://schema.org/AdministrativeArea> rdf:type owl:Class ;
+                                        rdfs:label "Administrative Area" .
+
+
+###  https://schema.org/CivicStructure
+<https://schema.org/CivicStructure> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://schema.org/Place> ;
+                                    rdfs:label "Civic Structure" .
+
+
+###  https://schema.org/Country
+<https://schema.org/Country> rdf:type owl:Class ;
+                             rdfs:label "Country" .
+
+
+###  https://schema.org/Hospital
+<https://schema.org/Hospital> rdf:type owl:Class ;
+                              rdfs:subClassOf <https://schema.org/CivicStructure> ,
+                                              <https://schema.org/MedicalOrganization> ;
+                              rdfs:label "Hospital" .
+
+
+###  https://schema.org/MedicalOrganization
+<https://schema.org/MedicalOrganization> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://schema.org/Organization> ;
+                                         rdfs:label "Medical Organization" .
+
+
+###  https://schema.org/Organization
+<https://schema.org/Organization> rdf:type owl:Class ;
+                                  rdfs:label "Organization" .
+
+
+###  https://schema.org/Place
+<https://schema.org/Place> rdf:type owl:Class ;
+                           rdfs:label "Place" .
+
+
+###  https://schema.org/PostalAddress
+<https://schema.org/PostalAddress> rdf:type owl:Class ;
+                                   rdfs:label "Postal Address" .
+
+
+###  https://w3id.org/def/salud/hospital#AutonomousCommunity
+:AutonomousCommunity rdf:type owl:Class ;
+                     rdfs:subClassOf <https://schema.org/AdministrativeArea> ;
+                     rdfs:label "Autonomous Community" .
+
+
+###  https://w3id.org/def/salud/hospital#ConcertAgreement
+:ConcertAgreement rdf:type owl:Class ;
+                  rdfs:label "Concert Agreement" .
+
+
+###  https://w3id.org/def/salud/hospital#FunctionalDependency
+:FunctionalDependency rdf:type owl:Class ;
+                      rdfs:label "Functional Dependency" .
+
+
+###  https://w3id.org/def/salud/hospital#HospitalType
+:HospitalType rdf:type owl:Class ;
+              rdfs:label "Hospital Type" .
+
+
+###  https://w3id.org/def/salud/hospital#Municipality
+:Municipality rdf:type owl:Class ;
+              rdfs:subClassOf <https://schema.org/AdministrativeArea> ;
+              rdfs:label "Municipality" .
+
+
+###  https://w3id.org/def/salud/hospital#Province
+:Province rdf:type owl:Class ;
+          rdfs:subClassOf <https://schema.org/AdministrativeArea> ;
+          rdfs:label "Province" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

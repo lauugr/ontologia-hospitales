@@ -1,0 +1,663 @@
+<h2 id="crossreference" class="list">T&eacute;rminos de Ontología para la representación de hospitales para clases, propiedades de objeto y propiedades de datos <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad definida por Ontología para la representación de hospitales.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Clases</h3>
+ <ul class="hlist">
+  <li><a href="#https://schema.org/AdministrativeArea" title="https://schema.org/AdministrativeArea">Administrative Area</a></li>
+  <li><a href="#AutonomousCommunity" title="https://w3id.org/def/salud/hospital#AutonomousCommunity">Autonomous Community</a></li>
+  <li><a href="#https://schema.org/CivicStructure" title="https://schema.org/CivicStructure">Civic Structure</a></li>
+  <li><a href="#ConcertAgreement" title="https://w3id.org/def/salud/hospital#ConcertAgreement">Concert Agreement</a></li>
+  <li><a href="#https://schema.org/Country" title="https://schema.org/Country">Country</a></li>
+  <li><a href="#FunctionalDependency" title="https://w3id.org/def/salud/hospital#FunctionalDependency">Functional Dependency</a></li>
+  <li><a href="#https://schema.org/Hospital" title="https://schema.org/Hospital">Hospital</a></li>
+  <li><a href="#HospitalType" title="https://w3id.org/def/salud/hospital#HospitalType">Hospital Type</a></li>
+  <li><a href="#https://schema.org/MedicalOrganization" title="https://schema.org/MedicalOrganization">Medical Organization</a></li>
+  <li><a href="#Municipality" title="https://w3id.org/def/salud/hospital#Municipality">Municipality</a></li>
+  <li><a href="#https://schema.org/Organization" title="https://schema.org/Organization">Organization</a></li>
+  <li><a href="#https://schema.org/Place" title="https://schema.org/Place">Place</a></li>
+  <li><a href="#https://schema.org/PostalAddress" title="https://schema.org/PostalAddress">Postal Address</a></li>
+  <li><a href="#Province" title="https://w3id.org/def/salud/hospital#Province">Province</a></li>
+ </ul>
+ <div class="entity" id="https://schema.org/AdministrativeArea">
+  <h3>Administrative Area<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/AdministrativeArea</p>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#AutonomousCommunity" title="https://w3id.org/def/salud/hospital#AutonomousCommunity">Autonomous Community</a> <sup class="type-c" title="clase">c</sup>, <a href="#Municipality" title="https://w3id.org/def/salud/hospital#Municipality">Municipality</a> <sup class="type-c" title="clase">c</sup>, <a href="#Province" title="https://w3id.org/def/salud/hospital#Province">Province</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AutonomousCommunity">
+  <h3>Autonomous Community<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#AutonomousCommunity</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#https://schema.org/AdministrativeArea" title="https://schema.org/AdministrativeArea">Administrative Area</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#containedInCountry" title="https://w3id.org/def/salud/hospital#containedInCountry">contained in country</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#https://schema.org/addressRegion" title="https://schema.org/addressRegion">address region</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#containedInRegion" title="https://w3id.org/def/salud/hospital#containedInRegion">contained in region</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/CivicStructure">
+  <h3>Civic Structure<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/CivicStructure</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Place" title="https://schema.org/Place">Place</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Hospital" title="https://schema.org/Hospital">Hospital</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ConcertAgreement">
+  <h3>Concert Agreement<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#ConcertAgreement</p>
+  <dl class="description">
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#hasConcertAgreement" title="https://w3id.org/def/salud/hospital#hasConcertAgreement">has concert agreement</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/Country">
+  <h3>Country<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/Country</p>
+  <dl class="description">
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#https://schema.org/addressCountry" title="https://schema.org/addressCountry">address country</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#containedInCountry" title="https://w3id.org/def/salud/hospital#containedInCountry">contained in country</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FunctionalDependency">
+  <h3>Functional Dependency<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#FunctionalDependency</p>
+  <dl class="description">
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#hasFunctionalDependency" title="https://w3id.org/def/salud/hospital#hasFunctionalDependency">has functional dependency</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/Hospital">
+  <h3>Hospital<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/Hospital</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#https://schema.org/CivicStructure" title="https://schema.org/CivicStructure">Civic Structure</a> <sup class="type-c" title="clase">c</sup>, <a href="#https://schema.org/MedicalOrganization" title="https://schema.org/MedicalOrganization">Medical Organization</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#https://schema.org/address" title="https://schema.org/address">address</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#ccnCode" title="https://w3id.org/def/salud/hospital#ccnCode">ccn code</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#cnhCode" title="https://w3id.org/def/salud/hospital#cnhCode">cnh code</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasConcertAgreement" title="https://w3id.org/def/salud/hospital#hasConcertAgreement">has concert agreement</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasFunctionalDependency" title="https://w3id.org/def/salud/hospital#hasFunctionalDependency">has functional dependency</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasHospitalType" title="https://w3id.org/def/salud/hospital#hasHospitalType">has hospital type</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#https://schema.org/name" title="https://schema.org/name">name</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#numberOfBeds" title="https://w3id.org/def/salud/hospital#numberOfBeds">number of beds</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#teachingAccreditation" title="https://w3id.org/def/salud/hospital#teachingAccreditation">teaching accreditation</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#https://schema.org/telephone" title="https://schema.org/telephone">telephone</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HospitalType">
+  <h3>Hospital Type<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#HospitalType</p>
+  <dl class="description">
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#hasHospitalType" title="https://w3id.org/def/salud/hospital#hasHospitalType">has hospital type</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/MedicalOrganization">
+  <h3>Medical Organization<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/MedicalOrganization</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Organization" title="https://schema.org/Organization">Organization</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Hospital" title="https://schema.org/Hospital">Hospital</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Municipality">
+  <h3>Municipality<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#Municipality</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#https://schema.org/AdministrativeArea" title="https://schema.org/AdministrativeArea">Administrative Area</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#containedInProvince" title="https://w3id.org/def/salud/hospital#containedInProvince">contained in province</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#https://schema.org/addressLocality" title="https://schema.org/addressLocality">address locality</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/Organization">
+  <h3>Organization<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/Organization</p>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#https://schema.org/MedicalOrganization" title="https://schema.org/MedicalOrganization">Medical Organization</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/Place">
+  <h3>Place<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/Place</p>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#https://schema.org/CivicStructure" title="https://schema.org/CivicStructure">Civic Structure</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/PostalAddress">
+  <h3>Postal Address<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/PostalAddress</p>
+  <dl class="description">
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#https://schema.org/addressCountry" title="https://schema.org/addressCountry">address country</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#https://schema.org/addressLocality" title="https://schema.org/addressLocality">address locality</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#addressProvince" title="https://w3id.org/def/salud/hospital#addressProvince">address province</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#https://schema.org/addressRegion" title="https://schema.org/addressRegion">address region</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#https://schema.org/postalCode" title="https://schema.org/postalCode">postal code</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#https://schema.org/streetAddress" title="https://schema.org/streetAddress">street address</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#https://schema.org/address" title="https://schema.org/address">address</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Province">
+  <h3>Province<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#Province</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#https://schema.org/AdministrativeArea" title="https://schema.org/AdministrativeArea">Administrative Area</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#containedInRegion" title="https://w3id.org/def/salud/hospital#containedInRegion">contained in region</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#addressProvince" title="https://w3id.org/def/salud/hospital#addressProvince">address province</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#containedInProvince" title="https://w3id.org/def/salud/hospital#containedInProvince">contained in province</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h2>Propiedades entre objetos</h2>
+ <ul class="hlist">
+  <li><a href="#https://schema.org/address" title="https://schema.org/address">address</a></li>
+  <li><a href="#https://schema.org/addressCountry" title="https://schema.org/addressCountry">address country</a></li>
+  <li><a href="#https://schema.org/addressLocality" title="https://schema.org/addressLocality">address locality</a></li>
+  <li><a href="#addressProvince" title="https://w3id.org/def/salud/hospital#addressProvince">address province</a></li>
+  <li><a href="#https://schema.org/addressRegion" title="https://schema.org/addressRegion">address region</a></li>
+  <li><a href="#containedInCountry" title="https://w3id.org/def/salud/hospital#containedInCountry">contained in country</a></li>
+  <li><a href="#containedInProvince" title="https://w3id.org/def/salud/hospital#containedInProvince">contained in province</a></li>
+  <li><a href="#containedInRegion" title="https://w3id.org/def/salud/hospital#containedInRegion">contained in region</a></li>
+  <li><a href="#hasConcertAgreement" title="https://w3id.org/def/salud/hospital#hasConcertAgreement">has concert agreement</a></li>
+  <li><a href="#hasFunctionalDependency" title="https://w3id.org/def/salud/hospital#hasFunctionalDependency">has functional dependency</a></li>
+  <li><a href="#hasHospitalType" title="https://w3id.org/def/salud/hospital#hasHospitalType">has hospital type</a></li>
+ </ul>
+ <div class="entity" id="https://schema.org/address">
+  <h3>address<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/address</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Hospital" title="https://schema.org/Hospital">Hospital</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#https://schema.org/PostalAddress" title="https://schema.org/PostalAddress">Postal Address</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://schema.org/addressCountry">
+  <h3>address country<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/addressCountry</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#https://schema.org/PostalAddress" title="https://schema.org/PostalAddress">Postal Address</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Country" title="https://schema.org/Country">Country</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://schema.org/addressLocality">
+  <h3>address locality<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/addressLocality</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#https://schema.org/PostalAddress" title="https://schema.org/PostalAddress">Postal Address</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#Municipality" title="https://w3id.org/def/salud/hospital#Municipality">Municipality</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="addressProvince">
+  <h3>address province<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#addressProvince</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#https://schema.org/PostalAddress" title="https://schema.org/PostalAddress">Postal Address</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#Province" title="https://w3id.org/def/salud/hospital#Province">Province</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://schema.org/addressRegion">
+  <h3>address region<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/addressRegion</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#https://schema.org/PostalAddress" title="https://schema.org/PostalAddress">Postal Address</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#AutonomousCommunity" title="https://w3id.org/def/salud/hospital#AutonomousCommunity">Autonomous Community</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="containedInCountry">
+  <h3>contained in country<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#containedInCountry</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#AutonomousCommunity" title="https://w3id.org/def/salud/hospital#AutonomousCommunity">Autonomous Community</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Country" title="https://schema.org/Country">Country</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="containedInProvince">
+  <h3>contained in province<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#containedInProvince</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Municipality" title="https://w3id.org/def/salud/hospital#Municipality">Municipality</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#Province" title="https://w3id.org/def/salud/hospital#Province">Province</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="containedInRegion">
+  <h3>contained in region<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#containedInRegion</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Province" title="https://w3id.org/def/salud/hospital#Province">Province</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#AutonomousCommunity" title="https://w3id.org/def/salud/hospital#AutonomousCommunity">Autonomous Community</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasConcertAgreement">
+  <h3>has concert agreement<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#hasConcertAgreement</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Hospital" title="https://schema.org/Hospital">Hospital</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#ConcertAgreement" title="https://w3id.org/def/salud/hospital#ConcertAgreement">Concert Agreement</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasFunctionalDependency">
+  <h3>has functional dependency<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#hasFunctionalDependency</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Hospital" title="https://schema.org/Hospital">Hospital</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#FunctionalDependency" title="https://w3id.org/def/salud/hospital#FunctionalDependency">Functional Dependency</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasHospitalType">
+  <h3>has hospital type<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#hasHospitalType</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Hospital" title="https://schema.org/Hospital">Hospital</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#HospitalType" title="https://w3id.org/def/salud/hospital#HospitalType">Hospital Type</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Propiedades de datos</h3>
+ <ul class="hlist">
+  <li><a href="#ccnCode" title="https://w3id.org/def/salud/hospital#ccnCode">ccn code</a></li>
+  <li><a href="#cnhCode" title="https://w3id.org/def/salud/hospital#cnhCode">cnh code</a></li>
+  <li><a href="#https://schema.org/name" title="https://schema.org/name">name</a></li>
+  <li><a href="#numberOfBeds" title="https://w3id.org/def/salud/hospital#numberOfBeds">number of beds</a></li>
+  <li><a href="#https://schema.org/postalCode" title="https://schema.org/postalCode">postal code</a></li>
+  <li><a href="#https://schema.org/streetAddress" title="https://schema.org/streetAddress">street address</a></li>
+  <li><a href="#teachingAccreditation" title="https://w3id.org/def/salud/hospital#teachingAccreditation">teaching accreditation</a></li>
+  <li><a href="#https://schema.org/telephone" title="https://schema.org/telephone">telephone</a></li>
+ </ul>
+ <div class="entity" id="ccnCode">
+  <h3>ccn code<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#ccnCode</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Hospital" title="https://schema.org/Hospital">Hospital</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="cnhCode">
+  <h3>cnh code<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#cnhCode</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Hospital" title="https://schema.org/Hospital">Hospital</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://schema.org/name">
+  <h3>name<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/name</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Hospital" title="https://schema.org/Hospital">Hospital</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="numberOfBeds">
+  <h3>number of beds<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#numberOfBeds</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Hospital" title="https://schema.org/Hospital">Hospital</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://schema.org/postalCode">
+  <h3>postal code<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/postalCode</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#https://schema.org/PostalAddress" title="https://schema.org/PostalAddress">Postal Address</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://schema.org/streetAddress">
+  <h3>street address<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/streetAddress</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#https://schema.org/PostalAddress" title="https://schema.org/PostalAddress">Postal Address</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="teachingAccreditation">
+  <h3>teaching accreditation<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/def/salud/hospital#teachingAccreditation</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Hospital" title="https://schema.org/Hospital">Hospital</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://schema.org/telephone">
+  <h3>telephone<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/telephone</p>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Hospital" title="https://schema.org/Hospital">Hospital</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Leyenda <span class="backlink"> volver a <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Clases">c</sup>: Clases <br/>
+<sup class="type-op" title="Propiedades de objeto">op</sup>: Propiedades de objeto <br/>
+<sup class="type-dp" title="Propiedades de datos">dp</sup>: Propiedades de datos <br/>
+</div>
+</div>

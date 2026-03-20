@@ -1,0 +1,267 @@
+<https://w3id.org/def/salud/hospital#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/def/salud/hospital#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/def/salud/hospital/0.2> .
+<https://w3id.org/def/salud/hospital#> <http://purl.org/dc/terms/created> "2026-03-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/def/salud/hospital#> <http://purl.org/dc/terms/creator> "Laura Gilgado Romero" .
+<https://w3id.org/def/salud/hospital#> <http://purl.org/dc/terms/description> "Ontología que describe los elementos asociados a los hospitales, entendidos como infraestructura sanitaria."@es .
+<https://w3id.org/def/salud/hospital#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/def/salud/hospital#> <http://purl.org/dc/terms/title> "Ontología para la representación de hospitales"@es .
+<https://w3id.org/def/salud/hospital#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "hosp" .
+<https://w3id.org/def/salud/hospital#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/def/salud/hospital#> .
+<https://w3id.org/def/salud/hospital#> <http://www.w3.org/2002/07/owl#versionInfo> "0.2" .
+<https://w3id.org/def/salud/hospital#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionIRI
+<http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionInfo
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://schema.org/address
+<https://schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Hospital> .
+<https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/PostalAddress> .
+<https://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#label> "address" .
+# 
+# https://schema.org/addressCountry
+<https://schema.org/addressCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/PostalAddress> .
+<https://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/Country> .
+<https://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#label> "address country" .
+# 
+# https://schema.org/addressLocality
+<https://schema.org/addressLocality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/PostalAddress> .
+<https://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/salud/hospital#Municipality> .
+<https://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#label> "address locality" .
+# 
+# https://schema.org/addressRegion
+<https://schema.org/addressRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/addressRegion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/PostalAddress> .
+<https://schema.org/addressRegion> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/salud/hospital#AutonomousCommunity> .
+<https://schema.org/addressRegion> <http://www.w3.org/2000/01/rdf-schema#label> "address region" .
+# 
+# https://w3id.org/def/salud/hospital#addressProvince
+<https://w3id.org/def/salud/hospital#addressProvince> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/salud/hospital#addressProvince> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/PostalAddress> .
+<https://w3id.org/def/salud/hospital#addressProvince> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/salud/hospital#Province> .
+<https://w3id.org/def/salud/hospital#addressProvince> <http://www.w3.org/2000/01/rdf-schema#label> "address province" .
+# 
+# https://w3id.org/def/salud/hospital#containedInCountry
+<https://w3id.org/def/salud/hospital#containedInCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/salud/hospital#containedInCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/salud/hospital#AutonomousCommunity> .
+<https://w3id.org/def/salud/hospital#containedInCountry> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/Country> .
+<https://w3id.org/def/salud/hospital#containedInCountry> <http://www.w3.org/2000/01/rdf-schema#label> "contained in country" .
+# 
+# https://w3id.org/def/salud/hospital#containedInProvince
+<https://w3id.org/def/salud/hospital#containedInProvince> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/salud/hospital#containedInProvince> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/salud/hospital#Municipality> .
+<https://w3id.org/def/salud/hospital#containedInProvince> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/salud/hospital#Province> .
+<https://w3id.org/def/salud/hospital#containedInProvince> <http://www.w3.org/2000/01/rdf-schema#label> "contained in province" .
+# 
+# https://w3id.org/def/salud/hospital#containedInRegion
+<https://w3id.org/def/salud/hospital#containedInRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/salud/hospital#containedInRegion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/salud/hospital#Province> .
+<https://w3id.org/def/salud/hospital#containedInRegion> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/salud/hospital#AutonomousCommunity> .
+<https://w3id.org/def/salud/hospital#containedInRegion> <http://www.w3.org/2000/01/rdf-schema#label> "contained in region" .
+# 
+# https://w3id.org/def/salud/hospital#hasConcertAgreement
+<https://w3id.org/def/salud/hospital#hasConcertAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/salud/hospital#hasConcertAgreement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Hospital> .
+<https://w3id.org/def/salud/hospital#hasConcertAgreement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/salud/hospital#ConcertAgreement> .
+<https://w3id.org/def/salud/hospital#hasConcertAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "has concert agreement" .
+# 
+# https://w3id.org/def/salud/hospital#hasFunctionalDependency
+<https://w3id.org/def/salud/hospital#hasFunctionalDependency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/salud/hospital#hasFunctionalDependency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Hospital> .
+<https://w3id.org/def/salud/hospital#hasFunctionalDependency> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/salud/hospital#FunctionalDependency> .
+<https://w3id.org/def/salud/hospital#hasFunctionalDependency> <http://www.w3.org/2000/01/rdf-schema#label> "has functional dependency" .
+# 
+# https://w3id.org/def/salud/hospital#hasHospitalType
+<https://w3id.org/def/salud/hospital#hasHospitalType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/salud/hospital#hasHospitalType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Hospital> .
+<https://w3id.org/def/salud/hospital#hasHospitalType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/salud/hospital#HospitalType> .
+<https://w3id.org/def/salud/hospital#hasHospitalType> <http://www.w3.org/2000/01/rdf-schema#label> "has hospital type" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://schema.org/name
+<https://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Hospital> .
+<https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
+# 
+# https://schema.org/postalCode
+<https://schema.org/postalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/PostalAddress> .
+<https://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#label> "postal code" .
+# 
+# https://schema.org/streetAddress
+<https://schema.org/streetAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/PostalAddress> .
+<https://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#label> "street address" .
+# 
+# https://schema.org/telephone
+<https://schema.org/telephone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Hospital> .
+<https://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#label> "telephone" .
+# 
+# https://w3id.org/def/salud/hospital#ccnCode
+<https://w3id.org/def/salud/hospital#ccnCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/salud/hospital#ccnCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Hospital> .
+<https://w3id.org/def/salud/hospital#ccnCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/salud/hospital#ccnCode> <http://www.w3.org/2000/01/rdf-schema#label> "ccn code" .
+# 
+# https://w3id.org/def/salud/hospital#cnhCode
+<https://w3id.org/def/salud/hospital#cnhCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/salud/hospital#cnhCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Hospital> .
+<https://w3id.org/def/salud/hospital#cnhCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/salud/hospital#cnhCode> <http://www.w3.org/2000/01/rdf-schema#label> "cnh code" .
+# 
+# https://w3id.org/def/salud/hospital#numberOfBeds
+<https://w3id.org/def/salud/hospital#numberOfBeds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/salud/hospital#numberOfBeds> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Hospital> .
+<https://w3id.org/def/salud/hospital#numberOfBeds> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/def/salud/hospital#numberOfBeds> <http://www.w3.org/2000/01/rdf-schema#label> "number of beds" .
+# 
+# https://w3id.org/def/salud/hospital#teachingAccreditation
+<https://w3id.org/def/salud/hospital#teachingAccreditation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/salud/hospital#teachingAccreditation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Hospital> .
+<https://w3id.org/def/salud/hospital#teachingAccreditation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/def/salud/hospital#teachingAccreditation> <http://www.w3.org/2000/01/rdf-schema#label> "teaching accreditation" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://schema.org/AdministrativeArea
+<https://schema.org/AdministrativeArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/AdministrativeArea> <http://www.w3.org/2000/01/rdf-schema#label> "Administrative Area" .
+# 
+# https://schema.org/CivicStructure
+<https://schema.org/CivicStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/CivicStructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Place> .
+<https://schema.org/CivicStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Civic Structure" .
+# 
+# https://schema.org/Country
+<https://schema.org/Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country" .
+# 
+# https://schema.org/Hospital
+<https://schema.org/Hospital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/Hospital> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/CivicStructure> .
+<https://schema.org/Hospital> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/MedicalOrganization> .
+<https://schema.org/Hospital> <http://www.w3.org/2000/01/rdf-schema#label> "Hospital" .
+# 
+# https://schema.org/MedicalOrganization
+<https://schema.org/MedicalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/MedicalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Organization> .
+<https://schema.org/MedicalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Medical Organization" .
+# 
+# https://schema.org/Organization
+<https://schema.org/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
+# 
+# https://schema.org/Place
+<https://schema.org/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place" .
+# 
+# https://schema.org/PostalAddress
+<https://schema.org/PostalAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/PostalAddress> <http://www.w3.org/2000/01/rdf-schema#label> "Postal Address" .
+# 
+# https://w3id.org/def/salud/hospital#AutonomousCommunity
+<https://w3id.org/def/salud/hospital#AutonomousCommunity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/salud/hospital#AutonomousCommunity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/AdministrativeArea> .
+<https://w3id.org/def/salud/hospital#AutonomousCommunity> <http://www.w3.org/2000/01/rdf-schema#label> "Autonomous Community" .
+# 
+# https://w3id.org/def/salud/hospital#ConcertAgreement
+<https://w3id.org/def/salud/hospital#ConcertAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/salud/hospital#ConcertAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "Concert Agreement" .
+# 
+# https://w3id.org/def/salud/hospital#FunctionalDependency
+<https://w3id.org/def/salud/hospital#FunctionalDependency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/salud/hospital#FunctionalDependency> <http://www.w3.org/2000/01/rdf-schema#label> "Functional Dependency" .
+# 
+# https://w3id.org/def/salud/hospital#HospitalType
+<https://w3id.org/def/salud/hospital#HospitalType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/salud/hospital#HospitalType> <http://www.w3.org/2000/01/rdf-schema#label> "Hospital Type" .
+# 
+# https://w3id.org/def/salud/hospital#Municipality
+<https://w3id.org/def/salud/hospital#Municipality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/salud/hospital#Municipality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/AdministrativeArea> .
+<https://w3id.org/def/salud/hospital#Municipality> <http://www.w3.org/2000/01/rdf-schema#label> "Municipality" .
+# 
+# https://w3id.org/def/salud/hospital#Province
+<https://w3id.org/def/salud/hospital#Province> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/salud/hospital#Province> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/AdministrativeArea> .
+<https://w3id.org/def/salud/hospital#Province> <http://www.w3.org/2000/01/rdf-schema#label> "Province" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
