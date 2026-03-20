@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+
+@prefix hosp: <https://w3id.org/def/salud/hospital#> .
+@prefix hospkos: <https://w3id.org/def/salud/hospital/kos/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+hospkos:ConcertAgreement a skos:ConceptScheme ; 
+    dct:issued "2026-03-10"^^xsd:date ;
+    dct:modified "2026-03-10"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "Esquema de conceptos para los tipos de concierto sanitario de hospitales."@es ;
+    rdfs:label "Tipos de concierto sanitario"@es ;
+    dct:title "Esquema de conceptos agrupando tipos de concierto sanitario"@es ;
+    skos:note "Valores extraídos del conjunto de datos de hospitales."@es .
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+<https://w3id.org/salud/recurso/hospital/concertAgreement/Concierto%20parcial> a hosp:ConcertAgreement , skos:Concept ;
+  skos:inScheme hospkos:ConcertAgreement ;
+  skos:prefLabel "Concierto parcial"@es .
+
+<https://w3id.org/salud/recurso/hospital/concertAgreement/Sin%20concierto> a hosp:ConcertAgreement , skos:Concept ;
+  skos:inScheme hospkos:ConcertAgreement ;
+  skos:prefLabel "Sin concierto"@es .
+
+<https://w3id.org/salud/recurso/hospital/concertAgreement/Red%20de%20Utilizaci%C3%B3n%20P%C3%BAblica> a hosp:ConcertAgreement , skos:Concept ;
+  skos:inScheme hospkos:ConcertAgreement ;
+  skos:prefLabel "Red de Utilización Pública"@es .
+
+<https://w3id.org/salud/recurso/hospital/concertAgreement/Concierto%20sustitutorio> a hosp:ConcertAgreement , skos:Concept ;
+  skos:inScheme hospkos:ConcertAgreement ;
+  skos:prefLabel "Concierto sustitutorio"@es .

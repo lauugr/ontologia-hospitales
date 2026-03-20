@@ -1,0 +1,79 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+
+@prefix hosp: <https://w3id.org/def/salud/hospital#> .
+@prefix hospkos: <https://w3id.org/def/salud/hospital/kos/> .
+
+#################################################################
+#
+#    Concept Scheme
+#
+#################################################################
+
+hospkos:FunctionalDependency a skos:ConceptScheme ; 
+    dct:issued "2026-03-10"^^xsd:date ;
+    dct:modified "2026-03-10"^^xsd:date ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "Esquema de conceptos para la dependencia funcional de hospitales."@es ;
+    rdfs:label "Dependencia funcional"@es ;
+    dct:title "Esquema de conceptos agrupando dependencias funcionales de hospitales"@es ;
+    skos:note "Valores extraídos del conjunto de datos de hospitales."@es .
+
+#################################################################
+#
+#    Concepts
+#
+#################################################################
+
+<https://w3id.org/salud/recurso/hospital/functionalDependency/Privados> a hosp:FunctionalDependency , skos:Concept ;
+    skos:inScheme hospkos:FunctionalDependency ;
+    skos:prefLabel "Privados"@es .
+
+<https://w3id.org/salud/recurso/hospital/functionalDependency/Servicios%20e%20institutos%20de%20salud%20de%20las%20comunidades%20aut%C3%B3nomas> a hosp:FunctionalDependency , skos:Concept ;
+    skos:inScheme hospkos:FunctionalDependency ;
+    skos:prefLabel "Servicios e institutos de salud de las comunidades autónomas"@es .
+
+<https://w3id.org/salud/recurso/hospital/functionalDependency/M%C3%BAtuas%20colaboradoras%20con%20la%20Seguridad%20Social> a hosp:FunctionalDependency , skos:Concept ;
+    skos:inScheme hospkos:FunctionalDependency ;
+    skos:prefLabel "Mútuas colaboradoras con la Seguridad Social"@es .
+
+<https://w3id.org/salud/recurso/hospital/functionalDependency/Otros%20centros%20o%20establecimientos%20p%C3%BAblicos%20de%20dependencia%20auton%C3%B3mica> a hosp:FunctionalDependency , skos:Concept ;
+    skos:inScheme hospkos:FunctionalDependency ;
+    skos:prefLabel "Otros centros o establecimientos públicos de dependencia autonómica"@es .
+
+<https://w3id.org/salud/recurso/hospital/functionalDependency/Organizaciones%20no%20gubernamentales> a hosp:FunctionalDependency , skos:Concept ;
+    skos:inScheme hospkos:FunctionalDependency ;
+    skos:prefLabel "Organizaciones no gubernamentales"@es .
+
+<https://w3id.org/salud/recurso/hospital/functionalDependency/Ministerio%20de%20Defensa> a hosp:FunctionalDependency , skos:Concept ;
+    skos:inScheme hospkos:FunctionalDependency ;
+    skos:prefLabel "Ministerio de Defensa"@es .
+
+<https://w3id.org/salud/recurso/hospital/functionalDependency/Municipio> a hosp:FunctionalDependency , skos:Concept ;
+    skos:inScheme hospkos:FunctionalDependency ;
+    skos:prefLabel "Municipio"@es .
+
+<https://w3id.org/salud/recurso/hospital/functionalDependency/Otras%20entidades%20u%20organismos%20p%C3%BAblicos> a hosp:FunctionalDependency , skos:Concept ;
+    skos:inScheme hospkos:FunctionalDependency ;
+    skos:prefLabel "Otras entidades u organismos públicos"@es .
+
+<https://w3id.org/salud/recurso/hospital/functionalDependency/Otros%20privados> a hosp:FunctionalDependency , skos:Concept ;
+    skos:inScheme hospkos:FunctionalDependency ;
+    skos:prefLabel "Otros privados"@es .
+
+<https://w3id.org/salud/recurso/hospital/functionalDependency/Otros%20centros%20o%20establecimientos%20p%C3%BAblicos%20de%20dependencia%20estatal> a hosp:FunctionalDependency , skos:Concept ;
+    skos:inScheme hospkos:FunctionalDependency ;
+    skos:prefLabel "Otros centros o establecimientos públicos de dependencia estatal"@es .
+
+<https://w3id.org/salud/recurso/hospital/functionalDependency/Diputaci%C3%B3n%20o%20cabildo> a hosp:FunctionalDependency , skos:Concept ;
+    skos:inScheme hospkos:FunctionalDependency ;
+    skos:prefLabel "Diputación o cabildo"@es .
+
+<https://w3id.org/salud/recurso/hospital/functionalDependency/Instituto%20Nacional%20de%20Gesti%C3%B3n%20Sanitaria> a hosp:FunctionalDependency , skos:Concept ;
+    skos:inScheme hospkos:FunctionalDependency ;
+    skos:prefLabel "Instituto Nacional de Gestión Sanitaria"@es .
